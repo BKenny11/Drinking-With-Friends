@@ -1,0 +1,77 @@
+body {
+    text-align: center;
+    height: calc(100vh - 16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(190deg, rgba(95, 127, 238, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    font-family: sans-serif;
+}
+
+.welcome-card {
+    background: #ededed;
+    border-radius: 10px;
+    padding: 20px
+}
+
+.title {
+    font-size: 24px;
+}
+
+.game-button {
+    text-decoration: none;
+    color: white;
+    background: #31b2fe;
+    border-radius: 30px;
+    padding: 10px 50px;
+    margin: 20px 0px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.deck {
+    height: 400px;
+    width: 225px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+.game-board {
+    display: flex;
+    margin-left: -225px;
+}
+
+.card {
+    height: 380px;
+    width: 205px;
+    background: white;
+    color: black;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    font-size: 18px;
+    padding: 10px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.new-game-button{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 18px;
+}
