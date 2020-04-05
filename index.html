@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="cards.js"></script>
+<style>
+    body {
+        text-align: center;
+        height: calc(100vh - 16px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: #758cc1; */
+        background: linear-gradient(190deg, rgba(95, 127, 238, 1) 0%, rgba(0, 212, 255, 1) 100%);
+        font-family: sans-serif;
+    }
+
+    .welcome-card {
+        background: #ededed;
+        border-radius: 10px;
+        padding: 20px
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .game-button {
+        text-decoration: none;
+        color: white;
+        background: #31b2fe;
+        border-radius: 30px;
+        padding: 10px 50px;
+        margin: 20px 0px;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .deck {
+        height: 400px;
+        width: 225px;
+        background: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        border-radius: 10px;
+    }
+
+    .game-board {
+        display: flex;
+    }
+
+    .card {
+        height: 380px;
+        width: 205px;
+        background: white;
+        color: black;
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        font-size: 18px;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <!-- <div v-for="card in cards":key="card.id">{{card.text}}</div> -->
+        <div class="welcome-card" v-if="!gameStarted">
+            <div class="title">Welcome to Drinking with Friends!</div>
+
+            <button class="game-button" onclick="startGame()">Begin Game!</button>
+
+            <div>Based off the game Buzzed, all you have to do is pick a card and do as it says!</div>
+
+            <div>Recommend video chatting with your friends through Facetime, Facebook, Zoom, etc. for most fun</div>
+
+            <div>WARNING: This game will get you tipsy</div>
+        </div>
+        <div v-if="gameStarted">
+            <div class="game-board">
+                <button class="deck" v-if="cards.length > 0" onclick="pickCard()">Draw Card</button>
+                <div class="card" v-if="currentCard != '' && cards.length > 0">{{currentCard}}</div>
+
+                <div v-if="cards.length == 0">
+                    <div>Out of Cards!</div>
+                    <button onclick="startGame()">Start a new Game!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var myObject = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                cards: [],
+                gameStarted: false,
+                currentCard: ''
+            }
+        })
+
+        function startGame() {
+            myObject.gameStarted = true;
+            for (let card of data.cards) {
+                myObject.cards.push(card);
+            }
+        }
+
+        function pickCard() {
+            if (myObject.cards.length > 0) {
+                let card_index = Math.floor(Math.random() * myObject.cards.length);
+                myObject.currentCard = myObject.cards[card_index].text;
+                myObject.cards.splice(card_index, 1);
+            } else {
+                myObject.currentCard = "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
