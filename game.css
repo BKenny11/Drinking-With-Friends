@@ -9,13 +9,28 @@ body {
 }
 
 .welcome-card {
-    background: #ededed;
+    background: white;
     border-radius: 10px;
-    padding: 20px
+    padding: 90px 20px;
 }
 
 .title {
     font-size: 24px;
+}
+
+.start-title{
+    font-style: italic;
+    font-size: 30px;
+}
+
+.warning{
+    color: red;
+    font-style: italic;
+}
+
+.notes{
+    font-size: 14px;
+    margin: 10px 0px;
 }
 
 .game-button {
@@ -24,7 +39,7 @@ body {
     background: #31b2fe;
     border-radius: 30px;
     padding: 10px 50px;
-    margin: 20px 0px;
+    margin: 30px 0px;
     display: inline-block;
     border: none;
     cursor: pointer;

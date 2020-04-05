@@ -8,16 +8,16 @@
 <body>
     <div id="app">
         <!-- <div v-for="card in cards":key="card.id">{{card.text}}</div> -->
-        <div class="welcome-card" v-if="!gameStarted">
-            <div class="title">Welcome to Drinking with Friends!</div>
+        <div class="welcome-card animated bounceInUp" v-if="!gameStarted">
+            <div class="start-title">Welcome to Drinking with Friends!</div>
 
             <button class="game-button" onclick="startGame()">Begin Game!</button>
 
-            <div>Based off the game Buzzed, all you have to do is pick a card and do as it says!</div>
+            <div class="notes">Based off the game Buzzed, all you have to do is pick a card and do as it says!</div>
 
-            <div>Recommend video chatting with your friends through Facetime, Facebook, Zoom, etc. for most fun</div>
+            <div class="notes">Recommend video chatting with your friends through Facetime, Facebook, Zoom, etc. for the most fun.</div>
 
-            <div>WARNING: This game will get you tipsy</div>
+            <div class="notes"><span class="warning">WARNING:</span> This game will get you tipsy</div>
         </div>
         <div v-if="gameStarted">
             <div class="game-board">
