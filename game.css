@@ -18,17 +18,17 @@ body {
     font-size: 24px;
 }
 
-.start-title {
+.start-title{
     font-style: italic;
     font-size: 30px;
 }
 
-.warning {
+.warning{
     color: red;
     font-style: italic;
 }
 
-.notes {
+.notes{
     font-size: 14px;
     margin: 10px 0px;
 }
@@ -79,7 +79,7 @@ body {
     pointer-events: none;
 }
 
-.new-game-button {
+.new-game-button{
     position: absolute;
     bottom: 25px;
     right: 25px;
@@ -91,49 +91,6 @@ body {
     font-size: 18px;
 }
 
-.player-list {
-    margin: 20px 5px
-}
-
-.player-entry {
-    margin: 10px 5px;
-    display: inline-block;
-    background: #ededed;
-    padding: 3px 5px;
-    border-radius: 6px;
-}
-
-.remove-button {
-    background: none;
-    border: none;
-}
-
-.name-field {
-    padding: 8px 10px;
-    border: none;
-    border-radius: 3px;
-}
-
-.add-button {
-    border: none;
-    color: white;
-    background: none;
-    font-size: 35px;
-}
-
-.begin-button {
-    margin-top: 29px;
-    border: white solid 2px;
-    background: none;
-    border-radius: 32px;
-    padding: 9px 30px;
-    color: white;
-    font-size: 16px;
-}
-
-.input-holder{
-    display: flex;
-}
 
 /* Portrait */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {

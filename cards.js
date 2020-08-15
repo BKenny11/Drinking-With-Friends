@@ -1,34 +1,6 @@
 data = {
     "cards":[
-        {"id":0, "text":"If you are studying/studied communcation drink 4 times." },
-        {"id":1, "text":"$p0 tell the first name and age of each player. Every person whose name or age is screwed up can give out 2 drinks." },
-        {"id":2, "text":"Those who don't fart infront of their partner, drink twice." },
-        {"id":3, "text":"$p0 make up your mind: which player is the last one to get to sleep after a night out: $p1 or $p2? Nightowl takes 2 drinks." },
-        {"id":4, "text":"$p0 drink 2 times if you have ever been rude to a teacher. Otherwise give out 2 drinks." },
-        {"id":5, "text":"Would you rather be able to dance like Michael Jackson or sing like Freddie Mercury? Everyone vote at the same time, losers drink 4 times." },
-        {"id":6, "text":"$p0 give $p1 free access to your instagram for 1 minute or finish your drink." },
-        {"id":7, "text":"$p0 do an action ordered by $p1. If you refuse or can't do it drink 3 times." },
-        {"id":8, "text":"Drink 4 sips if you've ever looked online for tips and tricks to lose weight without having to actually diet or workout." },
-        {"id":9, "text":"$p0 drink as many sips as number of sex partners you've had." },
-        {"id":10, "text":"$p0 drink as many sips as there are empty glasses or cans on the table." },
-        {"id":11, "text":"$p0 sing the chorus from a Justin Bieber song or drink 3 times." },
-        {"id":12, "text":"Drink 5 times if you've ever had sex in your parent's bed." },
-        {"id":13, "text":"$p0 you can give out as many sips as you have uncles." },
-        {"id":14, "text":"$p0 make up your mind: who would win in a push-up contest, $p1 or $p2? Mr.Biceps can give out 2 drinks." },
-        {"id":15, "text":"The first player between $p0 and $p1 to touch the fridge hands out 2 drinks." },
-        {"id":16, "text":"$p0 must choose the next song, those who like it drink 2 times." },
-        {"id":17, "text":"$p0 give out as many sips as there are red clothes you are wearing. Drink 5 times if you don't have any on." },
-        {"id":18, "text":"$p0 do a handstand or drink 3 times." },
-        {"id":19, "text":"$p0 make up your mind: who do you think is more of a computer whiz, $p1 or $p2? Mark Zuckerberg must drink twice." },
-        {"id":20, "text":"$p0, $p1, $p2 down your drinks." },
-        {"id":21, "text":"Anyone who has lived in more that 3 towns drink twice." },
-        {"id":22, "text":"Drink 2 times if you've already thought about having cosmetic surgery." },
-        {"id":23, "text":"People with shoes over 60 dollars, drink 3 times." },
-        {"id":24, "text":"$p0 if you are wearing flip flops give out 6 drinks, if not drink twice." },
-        {"id":25, "text":"Twix or Snickers? Vote at the same time and losing side drinks 3 times." },
-
-
-      /*  {"id":0, "text":"Drink if you've never watched Game of Thrones." },
+        {"id":0, "text":"Drink if you've never watched Game of Thrones." },
         {"id":1, "text":"Everyone take a sip of your drink without using your hands." },
         {"id":2, "text":"Drink if you have mulitple alarms set on your phone that are only minutes apart." },
         {"id":3, "text":"Everyone guess my phone's battery percentage. The person who is closest picks someone else to drink." },
@@ -188,6 +160,6 @@ data = {
         {"id":157, "text":"Drink if you read the news today. You need that drink."},
         {"id":158, "text":"Which player would make the best motivational speaker. Vote and then that person drinks and gives us a little life wisdom."},
         {"id":159, "text":"All players with and Android phone must grip it n' sip it."},
-        {"id":160, "text":"All players who are using someone else's Netflix account must drink. You can afford it."}*/
+        {"id":160, "text":"All players who are using someone else's Netflix account must drink. You can afford it."}
     ]
 };

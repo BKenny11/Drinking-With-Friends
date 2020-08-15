@@ -9,43 +9,21 @@
     <div id="app">
         <!-- <div v-for="card in cards":key="card.id">{{card.text}}</div> -->
         <div class="welcome-card animated bounceInUp" v-if="!gameStarted">
-            <div class="start-title">Welcome to Oboe!</div>
+            <div class="start-title">Welcome to Drinking with Friends!</div>
 
-            <button class="game-button" onclick="startGame()">Add Players!</button>
+            <button class="game-button" onclick="startGame()">Begin Game!</button>
 
-            <div class="notes">Based off the phone app game Piccolo, all you have to do is pick a card and do as it
-                says!</div>
+            <div class="notes">Based off the game Buzzed, all you have to do is pick a card and do as it says!</div>
 
-            <!-- <div class="notes">Recommend video chatting with your friends through Facetime, Facebook, Zoom, etc. for the most fun.</div> -->
+            <div class="notes">Recommend video chatting with your friends through Facetime, Facebook, Zoom, etc. for the most fun.</div>
 
             <div class="notes"><span class="warning">WARNING:</span> This game will get you tipsy</div>
         </div>
-        <div v-if="gameStarted && !playersEntered">
-            <div class="start-title">Enter the players!</div>
-
-            <div class="player-list">
-                <div v-for="player of players" :key="player" class="player-entry">
-                    {{player}}
-                    <!-- <button class="remove-button" onclick="removePlayer()">X</button> -->
-                </div>
-            </div>
-
-            <div class="input-holder">
-                <input type="text" class="name-field" v-on:keyup.enter="enterPlayer()" v-model="newPlayer"
-                    placeholder="Player's Name">
-                <button onclick="enterPlayer()" class="add-button">+</button>
-            </div>
-            <div>
-                <button onclick="finishEnteringPlayers()" class="begin-button">Begin Game</button>
-            </div>
-
-        </div>
-        <div v-if="gameStarted && playersEntered">
+        <div v-if="gameStarted">
             <div class="game-board">
                 <button class="deck" v-if="cards.length > 0" onclick="pickCard()">Draw Card</button>
                 <div class="cards-holder" v-if="cards.length > 0">
-                    <div class="card animated slideInLeft faster" v-for="card of cardsPulled" :key="card.id">
-                        {{interpolateCard(card.text)}}</div>
+                    <div class="card animated slideInLeft faster" v-for="card of cardsPulled" :key="card.id">{{card.text}}</div>
                 </div>
                 <div v-if="cards.length == 0" class="welcome-card">
                     <div class="title">Out of Cards!</div>
@@ -54,43 +32,26 @@
             </div>
         </div>
 
-        <button v-if="gameStarted" class="new-game-button" onclick="startGame()">Start New Game</button>
+        <button  v-if="gameStarted" class="new-game-button" onclick="startGame()">Start New Game</button>
     </div>
 
     <script>
         var myObject = new Vue({
             el: '#app',
             data: {
+                message: 'Hello Vue!',
                 cards: [],
-                players: [],
-                cardsPulled: [],
-                playersUsed: [],
-                newPlayer: '',
+                cardsPulled:[],
                 gameStarted: false,
-                playersEntered: false,
             }
         })
 
         function startGame() {
             myObject.gameStarted = true;
-
             myObject.cardsPulled = [];
             for (let card of data.cards) {
                 myObject.cards.push(card);
             }
-        }
-
-        function enterPlayer() {
-            myObject.players.push(myObject.newPlayer);
-            myObject.newPlayer = '';
-        }
-
-        function removePlayer(player) {
-            myObject.players = myObject.players.splice(myObject.players.indexOf(player), 1);
-        }
-
-        function finishEnteringPlayers() {
-            myObject.playersEntered = true;
         }
 
         function pickCard() {
@@ -99,40 +60,6 @@
                 myObject.cardsPulled.push(myObject.cards[card_index]);
                 myObject.cards.splice(card_index, 1);
             }
-        }
-
-        function interpolateCard(cardText) {
-            if (cardText.includes('$p')) {
-                let shuffledPlayers = shuffle(myObject.players);
-                let parsedText = cardText;
-                for (let i = 0; i < 3; i++) {
-                    parsedText = parsedText.replace(`$p${i}`, shuffledPlayers[i]);
-                }
-                return parsedText
-            } else {
-                return cardText;
-            }
-        }
-
-
-        function shuffle(array) {
-            var currentIndex = array.length,
-                temporaryValue, randomIndex;
-
-            // While there remain elements to shuffle...
-            while (0 !== currentIndex) {
-
-                // Pick a remaining element...
-                randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex -= 1;
-
-                // And swap it with the current element.
-                temporaryValue = array[currentIndex];
-                array[currentIndex] = array[randomIndex];
-                array[randomIndex] = temporaryValue;
-            }
-
-            return array;
         }
     </script>
 
