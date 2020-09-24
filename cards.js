@@ -84,7 +84,7 @@ data = {
         {"id":81, "text":"player reading this card must hum a song. First player to guess the song correctly gives out a drink."},
         {"id":82, "text":"Drink if you do your own taxes. But also congrats on being a real adult."},
         {"id":83, "text":"Drink if you have roommates. One drink for each one you have."},
-        {"id":84, "text":"Vote which player is the horniest. Player with the most votes drinks. Try to cool down there champ."},
+        {"id":84, "text":"Vote which player is the quirkiest. Player with the most votes give out 7 drinks."},
         {"id":85, "text":"Ketchup or mustard on a hot dog? losing team drinks. If you put both, also drink."},
         {"id":86, "text":"Which player can make the best horse noise? the player with the most votes gives out a drink."},
         {"id":87, "text":"Choose someone to play you in rock, paper scissors. Remaining players bet on who will win. Losers drink together in shame."},
